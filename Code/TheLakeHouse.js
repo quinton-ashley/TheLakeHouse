@@ -107,6 +107,7 @@ function preload() {
 		food.remove(); //...remove the Food...
 		prey.speedBoost = 0.03; //...and give a Speed-Boost
 	});
+	predators.overlaps(food);
 	//Custom Properties
 	food.age = 0;
 }
