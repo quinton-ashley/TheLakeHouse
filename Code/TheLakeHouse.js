@@ -109,6 +109,7 @@ function preload() {
 	});
 	//Custom Properties
 	food.age = 0;
+	food.overlaps(predators);
 }
 
 function setup() {
