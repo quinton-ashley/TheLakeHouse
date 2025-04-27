@@ -70,14 +70,14 @@ function preload() {
 	//############ Grass ############
 	//Grass Sprites
 	grass = new Group();
-	grass.addImg('Grass', '../Sprites/Tileset/Grass1.png');
+	grass.addAni('Grass', '../Sprites/Tileset/Grass1.png');
 	grass.collider = 'none';
 	grass.layer = 1;
 
 	//############ Water ############
 	//Water Sprite
 	water = new Group();
-	water.addImg('Grass', '../Sprites/Tileset/LakeNoBorders.png');
+	water.addAni('Grass', '../Sprites/Tileset/LakeNoBorders.png');
 	water.collider = 'none';
 	water.layer = 1;
 
@@ -89,19 +89,19 @@ function preload() {
 	//############ Stones ############
 	//Stone Sprites
 	stones = new Group();
-	stones.addImg('Stone', '../Sprites/Props/Stone.png');
+	stones.addAni('Stone', '../Sprites/Props/Stone.png');
 
 	//############ Trees ############
 	//Tree Sprites
 	trees = new Group();
-	trees.addImg('Tree', '../Sprites/Props/TreeMerged.png');
+	trees.addAni('Tree', '../Sprites/Props/TreeMerged.png');
 	trees.ani.offset.y = -12;
 	trees.collider = 'static';
 
 	//############ Food ############
 	//Food Sprite
 	food = new Group();
-	food.addImg('Food', '../Sprites/Props/Apple.png');
+	food.addAni('Food', '../Sprites/Props/Apple.png');
 	//If Prey overlaps Food...
 	prey.overlaps(food, (prey, food) => {
 		food.remove(); //...remove the Food...
@@ -138,11 +138,11 @@ function setup() {
 
 	//Build the Lakehouse
 	house = new Sprite(width / 2 - edgeDistance, (height / 6) * 5, 16, 16, 'static');
-	house.addImg('House', '../Sprites/Props/HouseMerged.png');
+	house.addAni('House', '../Sprites/Props/HouseMerged.png');
 
 	//Chest
 	chest = new Sprite(width / 2 - edgeDistance, (height / 6) * 5.3, 16, 16, 'static');
-	chest.addImg('Chest', '../Sprites/Props/Chest.png');
+	chest.addAni('Chest', '../Sprites/Props/Chest.png');
 }
 
 function draw() {
